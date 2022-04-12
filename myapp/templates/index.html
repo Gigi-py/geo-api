@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<style>
+    form {
+        border: 5px solid black;
+        width: 40%;
+        height: 500px;
+        /*padding: 50px;*/
+        padding-top: 35px;
+        background-color:wheat;
+        box-sizing: border-box;
+        margin: 20px auto;
+        border-radius: 10px;
+        text-align: center;
+    }
+    form  > input{
+        width: 70%;
+    }
+
+    .b {
+        width: 100px;
+        margin-top: 30px;
+        padding: 5px;
+        background-color: red;
+        color: white;
+        font-size: large;
+        border: none;
+        display: block;
+        margin: auto;
+    }
+</style>
+
+<form action="{{ url_for('main.home') }}"  method="POST">
+
+    <h1 style="margin-bottom: 40px;">Geo location API</h1>
+            <label for="Address">Address:</label>
+            <br>
+            <input type="address" name="address" id="" required>
+            <br>
+            <label for="city">City:</label>
+            <br>
+            <input type="text" name="city" id="" required>
+            <br>
+            <label for="state">State:</label>
+            <br>
+            <input type="text" name="state" id="" required>
+            <br>
+            <label for="zip code">Zip code:</label>
+            <br>
+            <input type="text" name="zip_code" id="" required>
+            <pre>
+     <button class="b">submit</button>
+            </pre>
+
+
+</form>
+
+
+{% endblock body %}
